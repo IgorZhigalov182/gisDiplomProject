@@ -13,7 +13,12 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+      "name": "Игорь",
+      "secondName": "Жигалов",
+      "email": "zhigalovIgor2699@gmail.com",
+      "phone": "+79516657644"
+    }
+  ]
 }

@@ -1,8 +1,4 @@
-
-
-.modalWrapper {
-    /* position: static; */
-    /* overflow: hidden; */
+    .modalWrapper {
     position:fixed;
     display:flex;
     width:100%;

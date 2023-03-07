@@ -3,6 +3,7 @@ import { Route, Router, useHistory } from 'react-router-dom';
 import Header from './components/header/Header';
 import FirstPage from './pages/FirstPage';
 // import reactLogo from './assets/react.svg';
+import '../src/App.css';
 
 function App() {
   const history = useHistory();
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="container">
         {/* <h1>Привет мир</h1>
       <div className="d-flex justify-content-center">Переход к хедеру</div> */}
         <FirstPage />
