@@ -1,11 +1,48 @@
 body {
     /* background: #101042; */
     /* background: linear-gradient(90.35deg, #101042 0.36%, #6161b6 201.02%); */
-    /* background: linear-gradient(90.35deg, #0b0b39 0.36%, #3f3e3f 201.02 */
-    /* background: linear-gradient(90.35deg, #10105cbf 10.36%, #ffffff 201.02%); */
+    /* background: linear-gradient(90.35deg, #0b0b39 0.36%, #3f3e3f 201.02) */
+    /* background:  linear-gradient(90.35deg, #10105cbf 10.36%, #ffffff 201.02%); */
     /* background: rgba(4, 21, 71, 0.79) */
 
-    background: rgba(22, 78, 210, 0.223)
-    
+    /* ТОП */
+    background: rgba(22, 78, 210, 0.223);
+    /* background: #041348; */
 
+    /* background: linear-gradient(45deg, #9be6ff 0%, rgba(225, 5, 34, 0) 70%) repeat scroll 0% 0%, linear-gradient(135deg, #ffd6ff 10%, rgba(49, 5, 209, 0) 80%) repeat scroll 0% 0%, linear-gradient(225deg, #a0c4ff 10%, rgba(10, 219, 216, 0) 80%) repeat scroll 0% 0%, rgba(0, 0, 0, 0) linear-gradient(315deg, #ffffbc 100%, rgba(9, 245, 5, 0) 70%) repeat scroll 0% 0%; */
+    /* background: linear-gradient(90.35deg, #d9e0ef 0.36%, #623e67 201.02%) */
+    /* background:
+    linear-gradient(to right, rgb(4, 108, 149), transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg); */
+
+    /* background: #1e293b; */
+
+    /* background: #4c617e;  */
+
+    /* background:
+    linear-gradient(to left, rgb(29, 107, 137), transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg); */
+
+
+    /* background-image: url('../public/img/123.png'); */
+
+}
+.container {
+    min-height: 100%;
+}
+
+h3 {
+    color: #05336e;
+    text-shadow: 4px 4px 5px rgb(156, 160, 178);
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    height: 50px; 
+    min-width: 8rem;
+    max-width: 15rem;
+    color: rgb(162, 180, 224);
+    background-color: #05336E;
 }

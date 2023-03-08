@@ -3,6 +3,8 @@ import { Route, Router, useHistory } from 'react-router-dom';
 import Header from './components/header/Header';
 import FirstPage from './pages/FirstPage';
 // import reactLogo from './assets/react.svg';
+import FirstPage9class from './pages/9class/firstPage/FirstPage9class';
+import FirstPage11class from './pages/11class/FirstPage11class';
 import '../src/App.css';
 
 function App() {
@@ -17,10 +19,6 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* <h1>Привет мир</h1>
-      <div className="d-flex justify-content-center">Переход к хедеру</div> */}
-        <FirstPage />
-
         {/* <iframe
         src="https://www.arcgis.com/home/webscene/viewer.html?webscene=b9ad8372ff884bc4a4e78d936b170f7d"
         style={{ width: '1000px', height: '500px' }}></iframe> */}
@@ -54,7 +52,10 @@ function App() {
         iFrames are not supported on this page.
       </iframe> */}
 
+        <Route path={'/'} component={() => <FirstPage />} exact />
         <Route path={'/header'} component={() => <Header />} exact />
+        <Route path={'/9class'} component={() => <FirstPage9class />} />
+        <Route path={'/11class'} component={() => <FirstPage11class />} />
       </div>
     </>
   );
