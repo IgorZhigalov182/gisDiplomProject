@@ -1,10 +1,10 @@
 import React from 'react';
-import '../levelSelection/levelSelection.css';
+import './levelSelection.css';
 import { useHistory } from 'react-router-dom';
+import Button from '../button/Button';
 
 const LevelSelection = () => {
   const history = useHistory();
-  //   console.log(hystory.location.pathname);
 
   const handleChoiceClass = ({ target }) => {
     const choiceValue = target.innerHTML;
@@ -17,12 +17,16 @@ const LevelSelection = () => {
     <div className="container lvl">
       <h3>Выберите свой класс</h3>
       <div className="innerContainer">
-        <button onClick={handleChoiceClass} className="btn btn-primary">
-          9 класс
-        </button>
-        <button onClick={handleChoiceClass} className="btn btn-primary">
-          10 - 11 класс
-        </button>
+        <Button
+          className={'btn btn-primary btnSelect'}
+          onClick={handleChoiceClass}
+          value={'9 класс'}
+        />
+        <Button
+          className={'btn btn-primary btnSelect'}
+          onClick={handleChoiceClass}
+          value={'11 класс'}
+        />
       </div>
     </div>
   );

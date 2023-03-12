@@ -1,14 +1,14 @@
 import React from 'react';
+import LevelSelection from '../../components/levelSelection/LevelSelection';
 import Header from '../../layouts/header/Header';
 
-import '../11class/FirstPage11class.css';
-
-const FirstPage11class = () => {
+const SelectClass = () => {
   return (
     <div className="container">
       <Header />
+      <LevelSelection />
     </div>
   );
 };
 
-export default FirstPage11class;
+export default SelectClass;

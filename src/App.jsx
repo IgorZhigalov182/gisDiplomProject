@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Route, Router, useHistory } from 'react-router-dom';
-import Header from './components/header/Header';
+import Header from './layouts/header/Header';
 import FirstPage from './pages/FirstPage';
 // import reactLogo from './assets/react.svg';
 import FirstPage9class from './pages/9class/firstPage/FirstPage9class';
 import FirstPage11class from './pages/11class/FirstPage11class';
 import '../src/App.css';
+import SelectClass from './pages/selectClass/SelectClass';
 
 function App() {
   const history = useHistory();
@@ -53,7 +54,7 @@ function App() {
       </iframe> */}
 
         <Route path={'/'} component={() => <FirstPage />} exact />
-        <Route path={'/header'} component={() => <Header />} exact />
+        <Route path={'/selectClass'} component={() => <SelectClass />} exact />
         <Route path={'/9class'} component={() => <FirstPage9class />} />
         <Route path={'/11class'} component={() => <FirstPage11class />} />
       </div>

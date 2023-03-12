@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Button from '../button/Button';
 import '../modalRegister/modalWindowRegister.css';
 
-const ModalWindowRegister = ({ stateRegistered }) => {
-  const [activeModal, setActiveModal] = useState(!stateRegistered);
+const ModalWindowRegister = () => {
+  const [activeModal, setActiveModal] = useState(true);
   const [data, setData] = useState({});
+
+  const history = useHistory();
 
   const handleChange = ({ target }) => {
     setData((prevState) => ({
@@ -18,7 +22,7 @@ const ModalWindowRegister = ({ stateRegistered }) => {
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
-      body: JSON.stringify([data]),
+      body: JSON.stringify([data, null, 2]),
     });
   };
 
@@ -26,6 +30,16 @@ const ModalWindowRegister = ({ stateRegistered }) => {
     e.preventDefault();
     setActiveModal(!activeModal);
     addPost();
+    history.push('/selectClass');
+  };
+
+  const handleContinue = (e) => {
+    e.preventDefault();
+    addPost();
+    setActiveModal(!activeModal);
+    setTimeout(() => {
+      setActiveModal(activeModal);
+    }, 0);
   };
 
   return (
@@ -34,7 +48,13 @@ const ModalWindowRegister = ({ stateRegistered }) => {
         <div className="modalWrapper">
           <div className="modalRegisterWindow">
             <p className="infoReg">
-              Для того, чтобы уведомить Вас о приеме в ЛЭТИ просим указать данные
+              Возможно, вы знакомитесь с ГИС не один. Для того, чтобы зарегистрировать каждого
+              участника необходимо воспользоваться кнопкой - "Следующий участник". Когда каждый
+              участник зарегистрируется нажмите "Зарегистрироваться"
+            </p>
+            <p className="infoReg warning">
+              Если Вы не хотите указывать свои персональные данные, нажмите на кнопку
+              Зарегистрироваться в самом конце, не заполняя поля.
             </p>
             <form className="formRegister">
               <div className="form-group">
@@ -83,9 +103,21 @@ const ModalWindowRegister = ({ stateRegistered }) => {
                 />
               </div>
 
-              <button className="btn btn-primary regModal" onClick={handleSubmit}>
+              {/* <button className="btn btn-primary regModal" onClick={handleSubmit}>
                 Зарегистрироваться
-              </button>
+              </button> */}
+              <div className="buttons">
+                <Button
+                  value={'Следующий участник'}
+                  onClick={handleContinue}
+                  className={'btn btn-secondary regModal next'}
+                />
+                <Button
+                  value={'Зарегистрироваться'}
+                  onClick={handleSubmit}
+                  className={'btn btn-primary regModal reg'}
+                />
+              </div>
             </form>
           </div>
         </div>

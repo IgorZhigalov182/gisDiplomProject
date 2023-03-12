@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-// import logo from '../../../gis-diplom/public/img/logo-leti-gold-rus-2017.png';
-// import logo from '../../../gis-diplom/public/img/';
 import logo from '../../../../gis-diplom/public/img/blueLogo.png';
-import ModalWindowRegister from '../modalRegister/ModalWindowRegister';
-import '../header/header.css';
+import Button from '../../components/button/Button';
+import ModalWindowRegister from '../../components/modalRegister/ModalWindowRegister';
+import './header.css';
 
 const Header = () => {
   const [registered, setRegistered] = useState(false);
+
   const handleClick = () => {
     setRegistered(!registered);
   };
+
   return (
     <>
       {registered ? <ModalWindowRegister /> : ''}
@@ -28,13 +29,12 @@ const Header = () => {
             alignItems: 'center',
           }}>
           <img src={logo} alt="Logo" style={{ minWidth: '20%', maxWidth: '25%' }} />
-          <button
-            className="btn btn-primary"
+
+          <Button
+            value={'Зарегистрироваться'}
             onClick={handleClick}
-            style={{ borderRadius: '15px', height: '50px', backgroundColor: '#05336E' }}
-            stateRegistered={registered}>
-            Зарегистрироваться
-          </button>
+            className={'btn btn-primary button'}
+          />
         </div>
       </div>
     </>
