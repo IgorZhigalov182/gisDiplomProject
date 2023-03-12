@@ -1,7 +1,7 @@
 import React from 'react';
 import './levelSelection.css';
 import { useHistory } from 'react-router-dom';
-import Button from '../button/Button';
+import Button from '../../components/button/Button';
 
 const LevelSelection = () => {
   const history = useHistory();

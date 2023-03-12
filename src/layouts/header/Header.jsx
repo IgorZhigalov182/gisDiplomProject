@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../../../gis-diplom/public/img/blueLogo.png';
 import Button from '../../components/button/Button';
-import ModalWindowRegister from '../../components/modalRegister/ModalWindowRegister';
+import ModalWindowRegister from '../modalRegister/ModalWindowRegister';
 import './header.css';
 
 const Header = () => {

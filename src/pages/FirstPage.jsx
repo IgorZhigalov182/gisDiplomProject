@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../layouts/header/Header';
-import WelcomeWindow from '../components/welcomeWindow/WelcomeWindow';
+import WelcomeWindow from '../layouts/welcomeWindow/WelcomeWindow';
 import '../pages/FirstPage.css';
 
 const FirstPage = () => {

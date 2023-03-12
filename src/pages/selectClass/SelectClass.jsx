@@ -1,5 +1,5 @@
 import React from 'react';
-import LevelSelection from '../../components/levelSelection/LevelSelection';
+import LevelSelection from '../../layouts/levelSelection/LevelSelection';
 import Header from '../../layouts/header/Header';
 
 const SelectClass = () => {

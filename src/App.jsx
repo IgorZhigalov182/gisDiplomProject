@@ -4,22 +4,14 @@ import Header from './layouts/header/Header';
 import FirstPage from './pages/FirstPage';
 // import reactLogo from './assets/react.svg';
 import FirstPage9class from './pages/9class/firstPage/FirstPage9class';
-import FirstPage11class from './pages/11class/FirstPage11class';
+import FirstPage11class from './pages/11class/firstPage/FirstPage11class';
 import '../src/App.css';
 import SelectClass from './pages/selectClass/SelectClass';
 
 function App() {
-  const history = useHistory();
-  const handleClick = () => {
-    // history.push('/header');
-    // history.replace('http://127.0.0.1:5500/');
-    // http://127.0.0.1:5500/
-    // a
-  };
-
   return (
     <>
-      <div className="container">
+      <div>
         {/* <iframe
         src="https://www.arcgis.com/home/webscene/viewer.html?webscene=b9ad8372ff884bc4a4e78d936b170f7d"
         style={{ width: '1000px', height: '500px' }}></iframe> */}

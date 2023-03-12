@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Button from '../button/Button';
-import '../modalRegister/modalWindowRegister.css';
+import Button from '../../components/button/Button';
+import './modalWindowRegister.css';
 
 const ModalWindowRegister = () => {
   const [activeModal, setActiveModal] = useState(true);

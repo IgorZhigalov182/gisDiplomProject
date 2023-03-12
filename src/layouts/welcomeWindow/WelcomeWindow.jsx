@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import LevelSelection from '../levelSelection/LevelSelection';
-import '../welcomeWindow/welcomeWindow.css';
+import './welcomeWindow.css';
 
 const WelcomeWindow = ({ registered }) => {
   // {registered ? : }
