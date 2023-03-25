@@ -1,0 +1,11 @@
+
+
+.navigationInfoGisExamplePage {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navigationInfoGisExamplePage>.btn {
+    margin-right: 1.5rem;
+}

@@ -31,11 +31,12 @@ body {
     min-height: 100%;
 }
 
-h3 {
+h1,h2,h3,h4, h5 {
     color: #05336e;
     text-shadow: 4px 4px 5px rgb(156, 160, 178);
     font-family: 'Roboto', sans-serif;
 }
+
 
 .btn {
     border-radius: 15px;

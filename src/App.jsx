@@ -7,10 +7,13 @@ import FirstPage9class from './pages/9class/firstPage/FirstPage9class';
 import FirstPage11class from './pages/11class/firstPage/FirstPage11class';
 import '../src/App.css';
 import SelectClass from './pages/selectClass/SelectClass';
+import InfoGisPage from './pages/infoGisPage/infoGisPage';
+import InfoGisExamplesPage from './pages/infoGisExamplesPage/infoGisExamplesPage';
 
 function App() {
   return (
     <>
+      <script src="https://kit.fontawesome.com/49b4e4fb6e.js" crossorigin="anonymous"></script>
       <div>
         {/* <iframe
         src="https://www.arcgis.com/home/webscene/viewer.html?webscene=b9ad8372ff884bc4a4e78d936b170f7d"
@@ -46,6 +49,8 @@ function App() {
       </iframe> */}
 
         <Route path={'/'} component={() => <FirstPage />} exact />
+        <Route path={'/infoGis'} component={() => <InfoGisPage />} exact />
+        <Route path={'/infoGisExample'} component={() => <InfoGisExamplesPage />} exact />
         <Route path={'/selectClass'} component={() => <SelectClass />} exact />
         <Route path={'/9class'} component={() => <FirstPage9class />} />
         <Route path={'/11class'} component={() => <FirstPage11class />} />

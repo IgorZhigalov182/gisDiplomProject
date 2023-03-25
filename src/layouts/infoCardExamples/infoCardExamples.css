@@ -1,0 +1,43 @@
+.wrapperCardExampleBody {
+    height: 33rem;
+}
+
+.lupaPlanetImg{
+    width: 6rem;
+    
+}
+
+.headaerInfoCardExamples {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.headerInfoCard {
+    margin-top: 1.8rem;
+    margin-right: 1.8rem;
+}
+
+.h3InfoCard {
+    text-align: start;
+    font-size: 1.5rem;    
+}
+
+.ulInfoCard {
+    color: #05336e;
+    text-align: start;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+}
+.ulInfoCard>li {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+.ulInfoCard>.fa-solid {
+    height: 12rem;
+}
+
+.navInfoCardExamples {
+    border: 1px solid black;
+}

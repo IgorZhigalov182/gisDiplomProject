@@ -1,0 +1,46 @@
+.wrapperCardInfo {
+    margin-top: 4rem;
+}
+
+.headerInfoCard {
+    text-align: center;
+}
+
+.infoCardImg {
+    width: 100%;
+}
+
+.infoCardP {
+    font-size: 1.2rem;
+}
+
+.cardBodyWithImg {
+    text-align: center;
+    padding: 1rem;
+}
+
+.infoCardImgCarousel {
+    width: 20%;
+    height: 15rem;
+}
+.pointerExamples {
+    text-align: center;
+}
+.arrowRightImg {
+    width: 30px;
+    margin-left: 1rem;
+    margin-bottom: 4px;
+}
+
+.wrapperCardBody, .cardBodyWithImg {
+    height: 25rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+.cardBodyWithImg {
+    padding-top: 4rem;
+}
+
+.infoCardBtn {
+    margin-top: 1rem;
+}
