@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Button from '../../components/button/Button';
 import Header from '../../layouts/header/Header';
 import InfoCardExamples from '../../layouts/infoCardExamples/infoCardExamples';
-import InfoCardExamples2 from '../../layouts/infoCardExamples2/infoCardExamples2';
+import InfoCardExamples2_9 from '../../layouts/infoCardExamples2_9/infoCardExamples2_9';
+import InfoCardExamples3_9 from '../../layouts/infoCardExamples3_9/infoCardExamples3_9';
 import './infoGisExamplesPage.css';
 
 const InfoGisExamplesPage = () => {
@@ -16,11 +18,15 @@ const InfoGisExamplesPage = () => {
     setActualPage((prevState) => prevState + 1);
   };
 
+  const history = useHistory();
+  const path = history.location.pathname;
+
   return (
     <div className="container">
       <Header />
       {actualPage === 0 ? <InfoCardExamples /> : ''}
-      {actualPage === 1 ? <InfoCardExamples2 /> : ''}
+      {actualPage === 1 && path.includes('9') ? <InfoCardExamples2_9 /> : ''}
+      {actualPage === 2 && path.includes('9') ? <InfoCardExamples3_9 /> : ''}
 
       <div className="navigationInfoGisExamplePage">
         {actualPage > 0 && (

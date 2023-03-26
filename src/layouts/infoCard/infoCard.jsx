@@ -6,9 +6,13 @@ import { useHistory } from 'react-router-dom';
 
 const InfoCard = () => {
   const history = useHistory();
+  const lvlClass = history.location.pathname;
+  console.log(lvlClass);
+
   const handleTransit = () => {
-    // history.location.pathname = '/info';
-    history.push('/infoGisExample');
+    lvlClass.includes('11')
+      ? history.push('/11class/infoGisExample')
+      : history.push('/9class/infoGisExample');
   };
 
   return (

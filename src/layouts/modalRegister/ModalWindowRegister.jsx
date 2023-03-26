@@ -30,7 +30,7 @@ const ModalWindowRegister = () => {
     e.preventDefault();
     setActiveModal(!activeModal);
     addPost();
-    history.push('/infoGis');
+    history.push('/selectClass');
   };
 
   const handleContinue = (e) => {

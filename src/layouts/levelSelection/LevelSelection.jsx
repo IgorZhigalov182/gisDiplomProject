@@ -10,7 +10,7 @@ const LevelSelection = () => {
     const choiceValue = target.innerHTML;
     console.log(target.innerHTML);
 
-    choiceValue === '9 класс' ? history.push('/9class') : history.push('/11class');
+    choiceValue === '9 класс' ? history.push('/9class/infoGis') : history.push('/11class/infoGis');
   };
 
   return (
