@@ -6,7 +6,7 @@
 
 .frame iframe {
     width: 98%;
-    min-height: 33rem;
+    min-height: 35rem;
 }
 .frame {
     width: 100%;
@@ -16,21 +16,21 @@
 }
 
 .exercise {
-    min-height: 35rem;
+    min-height: 37rem;
     display: flex;
     /* justify-content: center; */
+    text-align: center;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .btnWrapper {
     width: 100%;
-    /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .iframeBtn {
-    width: 75rem;
+    width: 10rem;
     height: 100px;
 }

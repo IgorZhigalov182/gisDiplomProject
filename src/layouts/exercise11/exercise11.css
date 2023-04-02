@@ -1,0 +1,50 @@
+.wrapperExe {
+    /* border: 1px solid black; */
+}
+
+.popUpWindow1 {
+    width: 20rem;
+    height: 13rem;
+    border-radius: 1.3rem;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.layer, .layer2{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1.3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+
+}
+
+.layer2, .prop, .popUp2, .popUp3, .popUp4, .popUp5, .popUp6, .popUp7, .popUp8{
+    width: 15rem;
+    border-radius: 1.3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+.popUp7{
+    height: 20rem;
+    width: 20rem;
+}
+.trends  {
+    width: 15rem;
+    border-radius: 1.3rem;
+}
+
+.distance, .distance1 {
+    width: 25rem;
+    border-radius: 1.3rem;
+}
+
+.popUpUl {
+    text-align: start;
+}
+
+.wrapperExe6 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
