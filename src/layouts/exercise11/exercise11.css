@@ -34,10 +34,41 @@
     border-radius: 1.3rem;
 }
 
-.distance, .distance1 {
+.distance, .distance1,.distance2 ,.distance3 {
     width: 25rem;
     border-radius: 1.3rem;
 }
+.distance2, .distance3{
+    width: 20rem;
+}
+
+.distance4, .distance5, .distance6 {
+    width: 2.5rem;
+    border-radius:100%;
+    margin-top: 10px;
+}
+
+.tools {
+    margin-top: 10px;
+    /* display: flex; */
+    margin-left: 15px;
+    /* align-items: start; */
+    /* align-content: start; */
+    /* justify-content: start; */
+}
+
+.tools > ul > li  {
+    display: flex;
+    flex-direction: row;
+}
+
+.tools > ul > li > p {
+    margin-top: 20px;
+    margin-left: 10px;
+    /* border: 1px solid black; */
+}
+
+
 
 .popUpUl {
     text-align: start;
@@ -47,4 +78,18 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+}
+li {
+    list-style-type: none;
+   }
+
+   .answers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   }
+
+.correctAnswer {
+    font-size: 2rem;
+    margin-top: 30px;
 }

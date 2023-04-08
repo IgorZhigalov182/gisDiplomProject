@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './exercise11.css';
+import Button from '../../components/button/Button';
 import popUpWindow from '../../../public/img/exe1.png';
 import layer from '../../../public/img/exe2.png';
 import layer2 from '../../../public/img/exe3.png';
@@ -13,9 +14,24 @@ import popUp7 from '../../../public/img/exe10.png';
 import popUp8 from '../../../public/img/exe11.png';
 import trends from '../../../public/img/trends.png';
 import distance from '../../../public/img/exe12.png';
-import distance1 from '../../../public/img/exe13.png';
+// import distance1 from '../../../public/img/exe13.png';
+import distance2 from '../../../public/img/exe14.png';
+import distance3 from '../../../public/img/exe15.png';
+import distance4 from '../../../public/img/exe16.png';
+import distance5 from '../../../public/img/exe17.png';
+import distance6 from '../../../public/img/exe18.png';
 
 const Exercise11 = ({ count }) => {
+  const [answerCorrect, setAnswerCorrect] = useState(null);
+
+  const checkCorrect = (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const answer = target.innerHTML;
+
+    answer === 'Кафе Остров' ? setAnswerCorrect(true) : setAnswerCorrect(false);
+  };
+
   return (
     <div className="wrapperExe">
       {count === 0 && (
@@ -176,7 +192,68 @@ const Exercise11 = ({ count }) => {
             Для того, чтобы измерить расстояние можно воспользоваться инструментом measurement
             (измерение)
           </p>
-          <img src={distance1} className="distance1" />
+          <img src={distance2} className="distance2" />
+        </>
+      )}
+
+      {count === 13 && (
+        <>
+          <p>
+            После чего откроется дополнительный функционал, благодаря которому можно производить
+            измерения расстояния.
+          </p>
+          <img src={distance3} className="distance3" />
+          <div className="tools">
+            <ul>
+              <li>
+                <img src={distance4} className="distance4" />
+                <p>измерить линейное расстояние</p>
+              </li>
+              <li>
+                <img src={distance5} className="distance5" />
+                <p>измерить расстояние участка (области)</p>
+              </li>
+              <li>
+                <img src={distance6} className="distance6" />
+                <p>удалить результат измерения</p>
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
+
+      {count === 14 && (
+        <>
+          <p>
+            Найдите расстояния до всех столовых и определите самое минимальное (Чтобы посмотреть
+            название столовой можно нажать на её метку)
+          </p>
+          <div className="answers">
+            <Button
+              value={'Кафе Moon'}
+              onClick={checkCorrect}
+              className={'btn btn-primary'}
+              style={{ marginTop: '10px' }}
+            />
+            <Button
+              value={'Нихао Москва'}
+              onClick={checkCorrect}
+              className={'btn btn-primary'}
+              style={{ marginTop: '10px' }}
+            />
+            <Button
+              value={'Кафе Остров'}
+              onClick={checkCorrect}
+              className={'btn btn-primary'}
+              style={{ marginTop: '10px' }}
+            />
+          </div>
+          {answerCorrect === false && <p>Почти</p>}
+          {answerCorrect && (
+            <p className="correctAnswer">Верно! ближайшая столовая на этой карте - Кафе Moon</p>
+          )}
+
+          {/* <button className="btn btn-primaty"></button> */}
         </>
       )}
     </div>
