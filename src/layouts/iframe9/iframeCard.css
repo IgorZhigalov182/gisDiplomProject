@@ -1,0 +1,36 @@
+.card {
+    background: rgba(22, 78, 210, 0);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.frame iframe {
+    width: 98%;
+    min-height: 35rem;
+}
+.frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.exercise {
+    min-height: 37rem;
+    display: flex;
+    /* justify-content: center; */
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.iframeBtn {
+    width: 10rem;
+    height: 100px;
+}

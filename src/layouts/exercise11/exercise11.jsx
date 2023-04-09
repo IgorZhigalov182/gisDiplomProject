@@ -20,6 +20,12 @@ import distance3 from '../../../public/img/exe15.png';
 import distance4 from '../../../public/img/exe16.png';
 import distance5 from '../../../public/img/exe17.png';
 import distance6 from '../../../public/img/exe18.png';
+import lopuhSad from '../../../public/img/lopuhSad.jpg';
+import search from '../../../public/img/search.png';
+import search2 from '../../../public/img/search2.png';
+import search3 from '../../../public/img/search3.png';
+import search4 from '../../../public/img/search4.png';
+import searchResult from '../../../public/img/searchResult.png';
 
 const Exercise11 = ({ count }) => {
   const [answerCorrect, setAnswerCorrect] = useState(null);
@@ -211,7 +217,7 @@ const Exercise11 = ({ count }) => {
               </li>
               <li>
                 <img src={distance5} className="distance5" />
-                <p>измерить расстояние участка (области)</p>
+                <p>измерить площадь участка (области)</p>
               </li>
               <li>
                 <img src={distance6} className="distance6" />
@@ -226,7 +232,7 @@ const Exercise11 = ({ count }) => {
         <>
           <p>
             Найдите расстояния до всех столовых и определите самое минимальное (Чтобы посмотреть
-            название столовой можно нажать на её метку)
+            название столовой можно нажать на её метку).
           </p>
           <div className="answers">
             <Button
@@ -254,6 +260,96 @@ const Exercise11 = ({ count }) => {
           )}
 
           {/* <button className="btn btn-primaty"></button> */}
+        </>
+      )}
+
+      {count === 15 && (
+        <>
+          <h4>Попробуйте самостоятельно измерить расстояние от своего дома до ЛЭТИ</h4>
+          {/* <img src={distance2} className="distance2" /> */}
+          <p>Результат можете записать в поле ниже</p>
+          <input placeholder="Ваш результат" className="form-control inputDistance"></input>
+        </>
+      )}
+
+      {count === 16 && (
+        <>
+          <h4>
+            Давайте познакомимся с инструментами поиска объектов на карте и измерения площадей
+          </h4>
+          {/* <img src={distance2} className="distance2" /> */}
+          <p>
+            Очень живописным местом на нашем замечательном аптекаском острове является Лопухинский
+            сад. Давайте найдём его!
+          </p>
+          <img src={lopuhSad} className="lopuhSad" />
+        </>
+      )}
+
+      {count === 17 && (
+        <>
+          <p>
+            Для того, чтобы найти какой-либо объект на карте необходимо воспользоваться инструментом
+            "Search" - (Поиск)
+          </p>
+          <img src={search} className="search" />
+          <p>
+            После чего откроется модальное окно в котором можно будет по названию найти нужный
+            объект
+          </p>
+          <img src={search2} className="search2" />
+
+          {/* <img src={lopuhSad} className="lopuhSad" /> */}
+        </>
+      )}
+
+      {count === 18 && (
+        <>
+          <p>
+            После выбора нужного объекта карта автоматически приблизиться к нему и откроется
+            модальное окно
+          </p>
+          <img src={search3} className="search3" />
+
+          {/* <img src={lopuhSad} className="lopuhSad" /> */}
+        </>
+      )}
+
+      {count === 19 && (
+        <>
+          <p>
+            По заданию необходимо найти площадь сада. Для этого воспользуемся уже знакомым
+            инструментом - 'измерение площади участка'
+          </p>
+          <img src={distance5} className="distance5" />
+          <p>
+            При использовании этого инструмента необходимо по точкам "обводить" необходимый объект.
+            Чем точнее происходит обведение объектов, тем точнее будет результат измерения
+          </p>
+          <img src={search4} className="search4" />
+        </>
+      )}
+
+      {count === 20 && (
+        <>
+          <h4>
+            Используя эту информацию попробуйте найти площадь Лопухинского сада и записать
+            получившийся результат
+          </h4>
+          <input placeholder="Ваш результат" className="form-control inputDistance"></input>
+          {/* <img src={search3} className="search3" /> */}
+
+          {/* <img src={lopuhSad} className="lopuhSad" /> */}
+        </>
+      )}
+
+      {count === 21 && (
+        <>
+          <h4>У автора данного задания получился такой результат:</h4>
+          <img src={searchResult} className="searchResult" />
+          <h5>В действительности же площадь сада занимает 57000 квадратных метров</h5>
+
+          {/* <img src={lopuhSad} className="lopuhSad" /> */}
         </>
       )}
     </div>

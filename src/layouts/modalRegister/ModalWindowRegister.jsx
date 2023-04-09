@@ -92,12 +92,12 @@ const ModalWindowRegister = () => {
                 />
               </div>
               <div className="form-group">
-                <label for="formGroupExamplePhone">Телефон</label>
+                <label for="formGroupExamplePhone">Название команды</label>
                 <input
-                  type="phone"
+                  type="text"
                   className="form-control"
                   id="formGroupExamplePhone"
-                  placeholder="Введите телефон"
+                  placeholder="Введите название команды"
                   name="phone"
                   onChange={handleChange}
                 />

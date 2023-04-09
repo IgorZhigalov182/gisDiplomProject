@@ -39,7 +39,7 @@ const InfoGisExamplesPage = () => {
       {actualPage === 4 && path.includes('11') ? <InfoCardExamples4_11 /> : ''}
       {actualPage === 5 && path.includes('11') ? <InfoCardExamples5_11 /> : ''}
 
-      {actualPage === 4 && path.includes('9') ? history.push('/') : ''}
+      {actualPage === 4 && path.includes('9') ? history.push('/9class') : ''}
       {actualPage === 6 && path.includes('11') ? history.push('/11class') : ''}
 
       <div className="navigationInfoGisExamplePage">

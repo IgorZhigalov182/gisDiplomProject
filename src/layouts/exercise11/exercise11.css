@@ -34,7 +34,7 @@
     border-radius: 1.3rem;
 }
 
-.distance, .distance1,.distance2 ,.distance3 {
+.distance, .distance1,.distance2 ,.distance3, .lopuhSad, .search2, .search3, .search4, .searchResult {
     width: 25rem;
     border-radius: 1.3rem;
 }
@@ -42,7 +42,11 @@
     width: 20rem;
 }
 
-.distance4, .distance5, .distance6 {
+.searchResult{
+    margin-bottom: 10px;
+}
+
+.distance4, .distance5, .distance6, .search {
     width: 2.5rem;
     border-radius:100%;
     margin-top: 10px;
@@ -92,4 +96,12 @@ li {
 .correctAnswer {
     font-size: 2rem;
     margin-top: 30px;
+}
+
+.inputDistance {
+    border-radius: 15px;
+    height: 3rem;
+    width: 15rem;
+    margin: 0 auto;
+    margin-top: 4rem;
 }

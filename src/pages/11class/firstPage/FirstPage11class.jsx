@@ -1,5 +1,5 @@
 import React from 'react';
-import IframeCard from '../../../layouts/iframe/IframeCard';
+import IframeCard from '../../../layouts/iframe11/IframeCard';
 import Header from '../../../layouts/header/Header';
 
 import './FirstPage11class.css';
