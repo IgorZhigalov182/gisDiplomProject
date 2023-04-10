@@ -1,11 +1,16 @@
-.exe9_1, .exe9_2 ,.exe9_3, .exe9_4, .exe9_5{
+.exe9_1, .exe9_2 ,.exe9_3, .exe9_4, .exe9_5, .exe9_6, .exe9_7 ,.exe9_8, .exe9_9, .exe9_10,.exe9_11{
     border-radius: 1.2rem;
 }
 
-.exe9_2 {
-    width: 60%;
+.exe9_6, .exe9_8,.exe9_11,.exe9_10 {
+    height: 12rem;
+    width: 80%;
     align-self: center;
-    height: 10rem;
+}
+.exe9_2 , .exe9_9{
+    width: 40%;
+    align-self: center;
+    height: 7rem;
 }
 
 .exe9_3, .exe9_5 {
