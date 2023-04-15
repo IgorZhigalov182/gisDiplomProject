@@ -1,9 +1,8 @@
-.exe9_1, .exe9_2 ,.exe9_3, .exe9_4, .exe9_5, .exe9_6, .exe9_7 ,.exe9_8, .exe9_9, .exe9_10,.exe9_11, .exe9_12, .exe9_1
-,.exe9_14{
+img{
     border-radius: 1.2rem;
 }
 
-.exe9_6, .exe9_8,.exe9_10 {
+.exe9_6, .exe9_8,.exe9_10, .exe9_15 {
     height: 12rem;
     width: 80%;
     align-self: center;
@@ -20,13 +19,30 @@
     width: 80%;
 }
 
-.exe9_12,.exe9_11 {
+.exe9_12,.exe9_11 , .exe9_17 {
     width: 60%;
     align-self: center;
 
 }
 
-.exe9_3, .exe9_5 {
+.exe9_3, .exe9_5, .exe9_16{
     width: 80%;
+    align-self: center;
+}
+
+.exe9_18,.exe9_19,.exe9_20,.exe9_21,.exe9_22,.exe9_23 {
+    height: 8rem;
+    width: 80%;
+    padding: 0.2rem;
+    align-self: center;
+}
+
+.changesLight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/*  */
+.trends,.distance2,.distance3,.search,.search4,.distance5{
     align-self: center;
 }

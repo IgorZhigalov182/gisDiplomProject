@@ -5,7 +5,7 @@ import './modalWindowRegister.css';
 
 const ModalWindowRegister = () => {
   const [activeModal, setActiveModal] = useState(true);
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ id: '' });
 
   const history = useHistory();
 
@@ -16,26 +16,27 @@ const ModalWindowRegister = () => {
     }));
   };
 
-  const addPost = async () => {
+  const addPost = async (personData) => {
     fetch('http://localhost:3000/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
       },
-      body: JSON.stringify([data, null, 2]),
+      body: JSON.stringify(personData),
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    data.id = Date.now();
+    localStorage.setItem('team', data.team);
+    await addPost(data);
     setActiveModal(!activeModal);
-    addPost();
     history.push('/selectClass');
   };
 
-  const handleContinue = (e) => {
-    e.preventDefault();
-    addPost();
+  const handleContinue = () => {
+    addPost(data);
     setActiveModal(!activeModal);
     setTimeout(() => {
       setActiveModal(activeModal);
@@ -98,7 +99,7 @@ const ModalWindowRegister = () => {
                   className="form-control"
                   id="formGroupExamplePhone"
                   placeholder="Введите название команды"
-                  name="phone"
+                  name="team"
                   onChange={handleChange}
                 />
               </div>

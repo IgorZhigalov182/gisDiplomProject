@@ -7,7 +7,7 @@ import './header.css';
 const Header = () => {
   const [registered, setRegistered] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     setRegistered(!registered);
   };
 
@@ -31,7 +31,7 @@ const Header = () => {
           <img src={logo} alt="Logo" style={{ minWidth: '20%', maxWidth: '25%' }} />
 
           <Button
-            value={'Зарегистрироваться'}
+            value={localStorage.getItem('team') || 'Зарегистрироваться'}
             onClick={handleClick}
             className={'btn btn-primary button'}
           />

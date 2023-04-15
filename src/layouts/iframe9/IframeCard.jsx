@@ -32,9 +32,14 @@ const IframeCard = () => {
                 {/* <iframe src="https://www.arcgis.com/apps/mapviewer/index.html"></iframe> */}
                 {/* <iframe src="https://www.arcgis.com/apps/configure-template/index.html?appid=c4897230651f451e9a2fd73e5ca7a98f"></iframe> */}
 
+                {localStorage.getItem('secondExercise') === 'true' ? (
+                  <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?webmap=e42c1d8491b8422d84af91a167f79bfc"></iframe>
+                ) : (
+                  <iframe src="https://www.arcgis.com/home/webscene/viewer.html?webscene=f37528f419674883adf8eeb411c1a2fe"></iframe>
+                )}
+
                 {/* signIn */}
                 {/* <iframe src="https://www.arcgis.com/apps/instant/basic/index.html?appid=c4897230651f451e9a2fd73e5ca7a98f"></iframe> */}
-                <iframe src="https://www.arcgis.com/home/webscene/viewer.html?webscene=f37528f419674883adf8eeb411c1a2fe"></iframe>
               </div>
               {/* <a href="#" className="btn btn-primary">
                 Go somewhere
@@ -45,7 +50,7 @@ const IframeCard = () => {
         <div className="col-sm-4">
           <div className="card">
             <div className="card-body exercise">
-              {count === 0 && <h5 className="card-title">Давайте немного попрактикуемся</h5>}
+              {count === 0 && <h4 className="card-title">Давайте немного попрактикуемся</h4>}
               {/* <h5 className="card-title">Задание {count}/sum</h5> */}
               <Exercise9 count={count} />
               <div className="btnWrapper">

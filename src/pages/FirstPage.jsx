@@ -5,10 +5,6 @@ import WelcomeWindow from '../layouts/welcomeWindow/WelcomeWindow';
 import '../pages/FirstPage.css';
 
 const FirstPage = () => {
-  // const handleHideESRIFooter = () => {
-  //   const esriFooter = document.querySelector('.esri-component esri-attribution esri-widget');
-  //   console.log(esriFooter);
-  // };
   const [userActive, setUserActive] = useState(false);
 
   return (

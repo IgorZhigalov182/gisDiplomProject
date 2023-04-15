@@ -1,24 +1,26 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
   "profile": [
     {
       "name": "Игорь",
       "secondName": "Жигалов",
       "email": "zhigalovIgor2699@gmail.com",
-      "phone": "+79516657644"
+      "team": "школа 260"
+    },
+    {
+      "id": 1681571158195
+    },
+    {
+      "id": 1681571302312
+    },
+    {
+      "id": 1681571643397
+    },
+    {
+      "id": 1681571644532
+    },
+    {
+      "id": 1681571755403,
+      "team": "Член"
     }
   ]
 }
