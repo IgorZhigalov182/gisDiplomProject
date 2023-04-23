@@ -22,6 +22,7 @@ function App() {
         <Route path={'/9class/infoGisExample'} component={() => <InfoGisExamplesPage />} exact />
         <Route path={'/9class'} component={() => <FirstPage9class />} exact />
         <Route path={'/11class'} component={() => <FirstPage11class />} exact />
+        <Route path={'/lastPage'} component={() => <LastPage />} exact />
       </Switch>
     </>
   );

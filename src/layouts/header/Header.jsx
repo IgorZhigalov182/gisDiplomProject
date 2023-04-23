@@ -14,21 +14,9 @@ const Header = () => {
   return (
     <>
       {registered ? <ModalWindowRegister /> : ''}
-
-      <div style={{ margin: '5px', marginTop: '25px', marginBottom: '20px' }}>
-        <div
-          style={{
-            width: '100%',
-            maxHeight: '80px',
-            // border: '1px solid black',
-            padding: '25px',
-            borderRadius: '15px',
-            boxShadow: '0 0 5px rgba(0, 0, 0, 0.8)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <img src={logo} alt="Logo" style={{ minWidth: '20%', maxWidth: '25%' }} />
+      <div className="headerDivWrap">
+        <div className="innerDivWrap">
+          <img className="logoInHeader" src={logo} alt="Logo" />
 
           <Button
             value={localStorage.getItem('team') || 'Зарегистрироваться'}

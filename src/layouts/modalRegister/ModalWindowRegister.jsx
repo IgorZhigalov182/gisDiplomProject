@@ -16,7 +16,7 @@ const ModalWindowRegister = () => {
     }));
   };
 
-  const addPost = async (personData) => {
+  const addUser = async (personData) => {
     fetch('http://localhost:3000/profile', {
       method: 'POST',
       headers: {
@@ -30,13 +30,13 @@ const ModalWindowRegister = () => {
     e.preventDefault();
     data.id = Date.now();
     localStorage.setItem('team', data.team);
-    await addPost(data);
+    await addUser(data);
     setActiveModal(!activeModal);
     history.push('/selectClass');
   };
 
   const handleContinue = () => {
-    addPost(data);
+    addUser(data);
     setActiveModal(!activeModal);
     setTimeout(() => {
       setActiveModal(activeModal);
@@ -103,10 +103,6 @@ const ModalWindowRegister = () => {
                   onChange={handleChange}
                 />
               </div>
-
-              {/* <button className="btn btn-primary regModal" onClick={handleSubmit}>
-                Зарегистрироваться
-              </button> */}
               <div className="buttons">
                 <Button
                   value={'Следующий участник'}
