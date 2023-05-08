@@ -26,9 +26,11 @@ import search2 from '../../../public/img/search2.png';
 import search3 from '../../../public/img/search3.png';
 import search4 from '../../../public/img/search4.png';
 import searchResult from '../../../public/img/searchResult.png';
+import { useHistory } from 'react-router-dom';
 
 const Exercise11 = ({ count }) => {
   const [answerCorrect, setAnswerCorrect] = useState(null);
+  const history = useHistory();
 
   const checkCorrect = (e) => {
     e.preventDefault();
@@ -254,12 +256,10 @@ const Exercise11 = ({ count }) => {
               style={{ marginTop: '10px' }}
             />
           </div>
-          {answerCorrect === false && <p>Почти</p>}
+          {answerCorrect === false && <p className="almost">Почти</p>}
           {answerCorrect && (
-            <p className="correctAnswer">Верно! ближайшая столовая на этой карте - Кафе Moon</p>
+            <p className="correctAnswer">Верно! ближайшая столовая на этой карте - Кафе Остров</p>
           )}
-
-          {/* <button className="btn btn-primaty"></button> */}
         </>
       )}
 
@@ -352,6 +352,8 @@ const Exercise11 = ({ count }) => {
           {/* <img src={lopuhSad} className="lopuhSad" /> */}
         </>
       )}
+
+      {count === 22 && history.push('/endPage')}
     </div>
   );
 };

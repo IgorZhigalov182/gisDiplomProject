@@ -9,6 +9,7 @@ import '../src/App.css';
 import SelectClass from './pages/selectClass/SelectClass';
 import InfoGisPage from './pages/infoGisPage/infoGisPage';
 import InfoGisExamplesPage from './pages/infoGisExamplesPage/infoGisExamplesPage';
+import FinalPage from './pages/finalPage/finalPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path={'/9class'} component={() => <FirstPage9class />} exact />
         <Route path={'/11class'} component={() => <FirstPage11class />} exact />
         <Route path={'/lastPage'} component={() => <LastPage />} exact />
+        <Route path={'/endPage'} component={() => <FinalPage />} exact />
       </Switch>
     </>
   );

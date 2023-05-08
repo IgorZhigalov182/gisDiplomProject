@@ -39,7 +39,7 @@ const IframeCard = () => {
                 )}
 
                 {/* signIn */}
-                {/* <iframe src="https://www.arcgis.com/apps/instant/basic/index.html?appid=c4897230651f451e9a2fd73e5ca7a98f"></iframe> */}
+                {/*     <iframe src="https://www.arcgis.com/apps/instant/basic/index.html?appid=c4897230651f451e9a2fd73e5ca7a98f"></iframe> */}
               </div>
               {/* <a href="#" className="btn btn-primary">
                 Go somewhere
