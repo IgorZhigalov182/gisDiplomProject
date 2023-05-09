@@ -1,0 +1,25 @@
+.btnEmoji{
+    width: 80px;
+}
+
+.inputReview{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.h5anotherClass {
+    margin-top: 3rem;
+}
+
+.reviewBlock {
+    margin-top: 2rem;
+}
+
+.btnFinal {
+    height: 4rem;
+    margin-top: 1rem;
+}
+
+.innerContainer {
+    margin-top: 1.5rem;
+}

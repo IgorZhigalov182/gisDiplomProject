@@ -2,13 +2,49 @@ import React from 'react';
 import './levelSelection.css';
 import { useHistory } from 'react-router-dom';
 import Button from '../../components/button/Button';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const LevelSelection = () => {
   const history = useHistory();
+  const [data, setData] = useState();
 
-  const handleChoiceClass = ({ target }) => {
+  useEffect(() => {
+    setClassInDB();
+  }, []);
+
+  const setClassInDB = async () => {
+    const dataDB = await fetch('http://localhost:3000/profile');
+    const dataDBjson = await dataDB.json();
+    // console.log(dataDBjson);
+
+    setData(dataDBjson);
+  };
+
+  const addUser = async (personData) => {
+    fetch('http://localhost:3000/profile', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(personData),
+    });
+  };
+
+  console.log(data);
+
+  const handleChoiceClass = async ({ target }) => {
     const choiceValue = target.innerHTML;
-    console.log(target.innerHTML);
+
+    const team = localStorage.getItem('team');
+
+    data.forEach((obj) => {
+      if (obj.team === team) {
+        obj.class = choiceValue;
+      }
+    });
+
+    addUser(data);
 
     choiceValue === '9 класс' ? history.push('/9class/infoGis') : history.push('/11class/infoGis');
   };

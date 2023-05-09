@@ -20,15 +20,34 @@ const EndingLayout = () => {
         'team',
       )}" за участие в проекте, надеемся, Вам понравилось, будем признательны, если оставите отзыв о ваших впечалениях`}</h3>
       <div className="innerContainer">
-        <Button className={'btn btn-primary btnSelect'} onClick={handleChoiceClass} value={'😡'} />
-        <Button className={'btn btn-primary btnSelect'} onClick={handleChoiceClass} value={'😐'} />
-        <Button className={'btn btn-primary btnSelect'} onClick={handleChoiceClass} value={'😃'} />
+        <Button
+          className={'btn btn-primary btnSelect btnEmoji'}
+          onClick={handleChoiceClass}
+          value={'😡'}
+        />
+        <Button
+          className={'btn btn-primary btnSelect btnEmoji'}
+          onClick={handleChoiceClass}
+          value={'😐'}
+        />
+        <Button
+          className={'btn btn-primary btnSelect btnEmoji'}
+          onClick={handleChoiceClass}
+          value={'😃'}
+        />
       </div>
-      <h5></h5>
-      <input className="form-control" aria-label="йцззцйзцйзйзйц"></input>
-      <h5>
+      <div className="reviewBlock">
+        <h5>Можете написать, что вам понравилось или непонравилось</h5>
+        <input className="form-control inputReview" aria-label="йцззцйзцйзйзйц"></input>
+        <Button
+          className={'btn btn-primary btnSelect btnFinal'}
+          onClick={handleChoiceClass}
+          value={'Отправить отзыв и завершить'}
+        />
+      </div>
+      <h5 className="h5anotherClass">
         Если у вас осталось время и желание посмотреть, что за задание было у другого класса, то
-        можете пройти ещё и его!
+        можете пройти также и его!
       </h5>
       <div className="innerContainer">
         <Button
