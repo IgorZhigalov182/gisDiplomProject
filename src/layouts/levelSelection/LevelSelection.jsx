@@ -16,37 +16,49 @@ const LevelSelection = () => {
   const setClassInDB = async () => {
     const dataDB = await fetch('http://localhost:3000/profile');
     const dataDBjson = await dataDB.json();
-    // console.log(dataDBjson);
+    console.log(dataDBjson);
 
     setData(dataDBjson);
   };
 
   const addUser = async (personData) => {
-    fetch('http://localhost:3000/profile', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify(personData),
+    const team = localStorage.getItem('team');
+    personData.forEach((obj) => {
+      if (obj.team === team) {
+        fetch(`http://localhost:3000/profile/${obj.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+          },
+          body: JSON.stringify(obj),
+        });
+      }
     });
   };
-
-  console.log(data);
 
   const handleChoiceClass = async ({ target }) => {
     const choiceValue = target.innerHTML;
 
     const team = localStorage.getItem('team');
 
-    data.forEach((obj) => {
-      if (obj.team === team) {
-        obj.class = choiceValue;
-      }
-    });
+    const recordClassInDB = () => {
+      const newArray = data.map((obj) => {
+        if (obj.team === team) {
+          obj.class = choiceValue;
+        }
+      });
 
-    addUser(data);
+      setData(newArray);
+      addUser(data);
+    };
 
-    choiceValue === '9 класс' ? history.push('/9class/infoGis') : history.push('/11class/infoGis');
+    if (choiceValue === '9 класс') {
+      recordClassInDB();
+      history.push('/9class/infoGis');
+    } else {
+      recordClassInDB();
+      history.push('/11class/infoGis');
+    }
   };
 
   return (
